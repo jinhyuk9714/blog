@@ -1,0 +1,33 @@
+# File: src/main/resources/application.yml
+spring:
+  datasource:
+    url: jdbc:h2:mem:blogdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    driverClassName: org.h2.Driver
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2
+server:
+  port: 8080
+  error:
+    include-message: always
+app:
+  admin:
+    username: admin
+    password: admin123   # ?? ??
+cors:
+  allowed-origins: "*"   # ??: ???? ??
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+logging:
+  level:
+    org.springdoc: DEBUG
