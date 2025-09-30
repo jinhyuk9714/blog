@@ -1,6 +1,7 @@
+// File: postcss.config.js
 export default {
     plugins: {
-        '@tailwindcss/postcss': {},  // ⬅️ tailwindcss 대신 이 패키지 사용
+        '@tailwindcss/postcss': {},  // v4 전용 PostCSS 플러그인
         autoprefixer: {},
     },
 };
