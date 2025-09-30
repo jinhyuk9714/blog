@@ -1,7 +1,12 @@
+// portfolio-blog-client/src/components/ui/textarea.jsx
 import React from "react";
 import { cn } from "../../lib/utils";
 
-export const Textarea = React.forwardRef(function Textarea({ className, rows = 4, ...props }, ref) {
+// why: 잘못된 전개(.props) → {...props}, 파라미터 전개 추가
+export const Textarea = React.forwardRef(function Textarea(
+    { className, rows = 4, ...props },
+    ref
+) {
     return (
         <textarea
             ref={ref}
